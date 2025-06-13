@@ -1,97 +1,123 @@
-/* Modern, clean styles for Guitar & Hebrew Lessons */
+/* --------------------------------------------------
+   Ultra‑modern, "cool teacher" theme
+   Inspired by subtle Israeli‑flag blues + crisp whites
+   Fonts: Fugaz One (headline), Inter (body)
+-------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Inter:wght@400;600&display=swap');
+
 :root {
-  --primary-color: #2c3e50;
-  --accent-color: #e67e22;
-  --text-color: #333;
-  --light-bg: #f9f9f9;
-  --white: #ffffff;
+  /* Palette */
+  --israel-blue: #0A7AFF;          /* Flag blue – primary accent */
+  --israel-light-blue: #9ac8ff;    /* Tint for hovers & highlights */
+  --israel-dark-blue: #094a9b;     /* For gradients / shadows */
+  --text-dark: #1a1a1a;
+  --text-muted: #555;
+  --bg-light: #fdfdfd;
+  --card-bg: #ffffff;
+  --radius: 14px;
+  --shadow: 0 6px 20px rgba(0,0,0,.08);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* ----- Reset & base typography ----- */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',sans-serif;
+  font-size:17px;
+  line-height:1.6;
+  color:var(--text-dark);
+  background:var(--bg-light);
+  -webkit-font-smoothing:antialiased;
+  padding:2rem clamp(1rem,4vw,3rem);
+  max-width:960px;
+  margin-inline:auto;
 }
 
-body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  line-height: 1.6;
-  color: var(--text-color);
-  background-color: var(--light-bg);
-  padding: 2rem;
-  max-width: 800px;
-  margin: 0 auto;
+/* Headline funk */
+h1, h2, h3{
+  font-family:'Fugaz One',cursive;
+  color:var(--israel-blue);
+  letter-spacing:.5px;
 }
+h1{font-size:3rem;margin-bottom:1rem;text-align:center}
+h2{font-size:2rem;margin:2.5rem 0 1rem;text-align:center}
 
-h1 {
-  color: var(--primary-color);
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
-  font-weight: 700;
+p{color:var(--text-muted);margin-bottom:1.25rem;text-align:center}
+
+/* ----- Buttons ----- */
+.btn-primary, button{
+  display:inline-block;
+  background:linear-gradient(135deg,var(--israel-blue),var(--israel-dark-blue));
+  color:#fff;
+  font-weight:600;
+  padding:.85rem 2.25rem;
+  border:none;
+  border-radius:var(--radius);
+  cursor:pointer;
+  text-decoration:none;
+  transition:transform .2s ease,box-shadow .2s ease;
 }
+.btn-primary:hover,button:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.15)}
 
-p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  text-align: center;
-  color: var(--primary-color);
+/* ----- Cards & sections ----- */
+section{margin-block:3rem;padding-block:1rem}
+section:not(#contact){border-top:2px solid var(--israel-light-blue)}
+
+/* Lesson list */
+#lessons ul{list-style:none;max-width:700px;margin-inline:auto;text-align:left}
+#lessons li{position:relative;padding-left:2.25rem;margin-bottom:.75rem}
+#lessons li::before{
+  content:"\1F3B5"; /* music note emoji */
+  position:absolute;left:0;top:0;font-size:1.25rem;color:var(--israel-blue)}
+
+/* Packages table */
+#packages table{
+  width:100%;
+  border-collapse:collapse;
+  background:var(--card-bg);
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:var(--shadow);
 }
+#packages th,#packages td{padding:1rem;text-align:center}
+#packages thead{background:var(--israel-blue);color:#fff;font-family:'Fugaz One',cursive;font-size:1.1rem}
+#packages tbody tr:nth-child(even){background:var(--bg-light)}
 
-form {
-  background: var(--white);
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* Testimonials */
+blockquote{background:var(--card-bg);padding:1.5rem;border-left:6px solid var(--israel-blue);border-radius:var(--radius);box-shadow:var(--shadow);margin:1rem auto;max-width:700px}
+blockquote cite{display:block;margin-top:.75rem;font-style:normal;font-weight:600;color:var(--israel-blue)}
+
+/* FAQ accordion */
+details{background:var(--card-bg);border:1px solid var(--israel-light-blue);border-radius:var(--radius);padding:1rem;margin-bottom:.75rem;box-shadow:var(--shadow)}
+details[open] summary{color:var(--israel-blue)}
+summary{cursor:pointer;font-weight:600;list-style:none}
+summary::-webkit-details-marker{display:none}
+
+/* ----- Contact form ----- */
+form{background:var(--card-bg);padding:2rem;border-radius:var(--radius);box-shadow:var(--shadow);max-width:600px;margin-inline:auto}
+input,textarea{
+  width:100%;
+  padding:.9rem 1rem;
+  margin-bottom:1rem;
+  border:2px solid #e0e0e0;
+  border-radius:var(--radius);
+  font-family:'Inter',sans-serif;
+  font-size:1rem;
+  transition:border .25s ease,box-shadow .25s ease;
 }
+input:focus,textarea:focus{border-color:var(--israel-blue);box-shadow:0 0 0 3px rgba(10,122,255,.15);outline:none}
+textarea{min-height:160px;resize:vertical}
 
-input, textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 1rem;
-  border: 2px solid #eee;
-  border-radius: 5px;
-  font-size: 1rem;
-  transition: border-color 0.3s ease;
-}
+/* Turnstile widget spacing */
+.cf-turnstile{margin:1rem 0}
 
-input:focus, textarea:focus {
-  outline: none;
-  border-color: var(--accent-color);
-}
+/* Footer */
+footer{text-align:center;font-size:.9rem;color:var(--text-muted);margin-top:4rem}
 
-textarea {
-  min-height: 150px;
-  resize: vertical;
-}
-
-button {
-  background-color: var(--accent-color);
-  color: var(--white);
-  padding: 12px 24px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  width: 100%;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #d35400;
-}
-
-/* Responsive design */
-@media (max-width: 600px) {
-  body {
-    padding: 1rem;
-  }
-  
-  h1 {
-    font-size: 2rem;
-  }
-  
-  form {
-    padding: 1.5rem;
-  }
+/* ----- Responsive tweaks ----- */
+@media (max-width:600px){
+  h1{font-size:2.4rem}
+  h2{font-size:1.65rem}
+  body{padding:1.5rem}
+  #lessons ul{padding-left:0}
 }

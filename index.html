@@ -2,20 +2,116 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Guitar + Hebrew Lessons – Denver</title>
+  <title>Guitar & Hebrew Lessons – Denver | Learn Music & Language Together</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Private guitar and Hebrew lessons for Denver’s Jewish and Israeli community.">
+  <meta name="description" content="Private guitar and Hebrew lessons for Denver’s Jewish and Israeli community. Combine music and language in an engaging curriculum for kids and adults.">
+  <meta name="keywords" content="guitar lessons Denver, Hebrew lessons Denver, Jewish community, Israeli community, music teacher, language tutor">
   <link rel="stylesheet" href="style.css">
+
+  <!-- Turnstile script -->
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+  <!-- Structured data for local SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Guitar & Hebrew Lessons – Denver",
+    "description": "Private guitar and Hebrew lessons for Denver’s Jewish and Israeli community.",
+    "areaServed": "Denver, CO",
+    "url": "https://mydenverguitar.com",
+    "telephone": "+1-303-555-0123",
+    "provider": {
+      "@type": "Person",
+      "name": "Your Name"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Denver",
+      "addressRegion": "CO",
+      "addressCountry": "US"
+    }
+  }
+  </script>
 </head>
 <body>
-  <h1>Guitar & Hebrew Lessons in Denver</h1>
-  <p>Now accepting students! Kids, adults, all levels welcome.</p>
+  <header>
+    <h1>Guitar &amp; Hebrew Lessons in Denver</h1>
+    <p>Now accepting students! Kids, adults, all levels welcome.</p>
+    <a href="#contact" class="btn-primary">Book a Free Intro Call</a>
+  </header>
 
-  <form action="https://formspree.io/f/xwpboadz" method="POST">
-    <input name="name" placeholder="Name" required>
-    <input type="email" name="_replyto" placeholder="Email" required>
-    <textarea name="message" placeholder="Tell me your goals..."></textarea>
-    <button type="submit">Send</button>
-  </form>
+  <main>
+    <section id="about">
+      <h2>About Your Teacher</h2>
+      <p>Shalom! I'm <strong>Your Name</strong>, a Berklee-trained guitarist and native Hebrew speaker with 10+ years of teaching experience. I help students build musical skills while naturally absorbing modern Hebrew vocabulary and conversation.</p>
+    </section>
+
+    <section id="lessons">
+      <h2>What You’ll Learn</h2>
+      <ul>
+        <li>🎸 <strong>Guitar Technique</strong> – chords, fingerstyle, improvisation</li>
+        <li>📜 <strong>Hebrew Language</strong> – reading, pronunciation, daily conversation</li>
+        <li>🎶 <strong>Jewish &amp; Israeli Repertoire</strong> – from folk classics to modern hits</li>
+        <li>🧠 <strong>Integrated Curriculum</strong> – learn music theory &amp; Hebrew grammar together</li>
+      </ul>
+    </section>
+
+    <section id="packages">
+      <h2>Rates &amp; Packages</h2>
+      <table>
+        <thead>
+          <tr><th>Package</th><th>Details</th><th>Price</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Trial Lesson</td><td>30‑min intro (online or in‑person)</td><td>Free</td></tr>
+          <tr><td>Single Session</td><td>60‑min private lesson</td><td>$60</td></tr>
+          <tr><td>5‑Lesson Bundle</td><td>Save 10%</td><td>$270</td></tr>
+          <tr><td>10‑Lesson Bundle</td><td>Save 20%</td><td>$480</td></tr>
+        </tbody>
+      </table>
+      <p><em>Sliding scale available for students &amp; new immigrants.</em></p>
+    </section>
+
+    <section id="testimonials">
+      <h2>What Students Say</h2>
+      <blockquote>
+        “After three months I can strum along to Israeli pop and hold a basic conversation in Hebrew. The lessons are fun and immersive!”<br><cite>— Sarah K., Stapleton</cite>
+      </blockquote>
+      <blockquote>
+        “My 10‑year‑old looks forward to class every week. We’ve seen huge improvement in both music and language skills.”<br><cite>— Daniel R., Cherry Creek</cite>
+      </blockquote>
+    </section>
+
+    <section id="faq">
+      <h2>FAQ</h2>
+      <details>
+        <summary>Do I need any Hebrew background?</summary>
+        <p>No prior Hebrew required. We start with basic phrases and build naturally.</p>
+      </details>
+      <details>
+        <summary>Can lessons be online?</summary>
+        <p>Yes! I teach via Zoom for remote students or during inclement weather.</p>
+      </details>
+    </section>
+
+    <section id="contact">
+      <h2>Get in Touch</h2>
+      <form action="https://formspree.io/f/xwpboadz" method="POST">
+        <input name="name" placeholder="Name" required>
+        <input type="email" name="_replyto" placeholder="Email" required>
+        <textarea name="message" placeholder="Tell me your goals..." required></textarea>
+
+        <!-- Turnstile widget -->
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAABg6ctqgnplqPsjP"></div>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Guitar & Hebrew Lessons – Denver. All rights reserved.</p>
+  </footer>
 </body>
 </html>
